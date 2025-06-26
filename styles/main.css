@@ -200,36 +200,12 @@ a {
 .breadcrumbs {     
     font-size: 14px;
     line-height: 1.5;
-    color: #666;
     margin-bottom: 20px;
 }
 
- 
-
-.breadcrumbs a {
-    color: #1e88e5;
-    text-decoration: none;
-    transition: color 0.2s;
-}
-
- 
-
-.breadcrumbs a:hover {
-    color: #0d47a1;
-    text-decoration: underline;
-}
-
- 
-
 .breadcrumbs__separator {
     margin: 0 5px;
-    color: #999;
-}
-
-
-.breadcrumbs span:last-child {
-    color: #333;
-    font-weight: 500;
+    color: #724835;
 }
 
 .download_link{
@@ -255,7 +231,7 @@ a {
 }
 
 .lesson_container {
-    max-width: 1000px;
+    max-width: 1240px;
     margin: 0 auto;
     background-color: white;
     padding: 20px;
@@ -269,3 +245,27 @@ a {
     color: #444;
 }
 
+.download_link {
+    width: 80%;
+    max-width: 1000px;
+    margin: 10px auto;
+    text-align: center;
+    padding: 10px;
+    background: #ffff;
+    border-radius: 2px;
+}
+
+.lesson_18 {
+    width: "900";
+    height: "700";
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px; 
+}
+
+.lesson_name {
+    text-align: center;
+    padding: 4px;
+}
