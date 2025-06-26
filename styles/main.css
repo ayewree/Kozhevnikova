@@ -196,3 +196,76 @@ a {
     position: relative;
     padding-left: 25px;
 }
+
+.breadcrumbs {     
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+ 
+
+.breadcrumbs a {
+    color: #1e88e5;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+ 
+
+.breadcrumbs a:hover {
+    color: #0d47a1;
+    text-decoration: underline;
+}
+
+ 
+
+.breadcrumbs__separator {
+    margin: 0 5px;
+    color: #999;
+}
+
+
+.breadcrumbs span:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
+.download_link{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.download_link button {
+    padding: 8px 15px;
+    background-color: #d7987d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 150px;
+    box-sizing: border-box; 
+}
+
+.download_link button:hover {
+    background-color: #cf8362;
+}
+
+.lesson_container {
+    max-width: 1000px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.lesson_text {
+    text-align: left;
+    line-height: 1.6;
+    color: #444;
+}
+
