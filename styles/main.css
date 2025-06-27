@@ -137,16 +137,6 @@ a {
     color: inherit;
 }
 
-.children__img {
-    width: "900";
-    height: "700";
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px; 
-}
-
 .start__inner {
     display: flex;
     align-items: center; 
@@ -268,4 +258,45 @@ a {
 .lesson_name {
     text-align: center;
     padding: 4px;
+}
+
+.intensive {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.intensive__item {
+    width: 900px;
+    position: relative;
+}
+
+.intensive__img {
+    width: 100%;
+    display: block;
+    transition: opacity 0.3s ease;
+}
+
+.intensive__description {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    color: #000000;
+    text-align: center;
+    padding: 0px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+[hidden] {
+    display: none !important;
+}
+
+.intensive__img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
 }
