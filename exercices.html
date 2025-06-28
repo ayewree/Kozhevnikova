@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="styles/fonts.css">
     <link rel="stylesheet" href="styles/footer.css">
     <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 <body>
     <header>
@@ -62,7 +65,29 @@
             <h1 class="lesson_title">Spotlight 4. Урок 18: "The Hare and the Tortoise"</h1>
             <p>Калашникова Евгения Григорьевна, учитель иностранных языков</p>
         </div>
-        <img src="Images/the_hare.jpg" alt="Заяц и черепаха" class="lesson_18">
+
+        <div class="swiper-container">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="Images/the_hare1.png" alt="Заяц и черепаха" class="lesson_18">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/the_hare2.png" alt="Заяц и черепаха" class="lesson_18">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/the_hare3.png" alt="Заяц и черепаха" class="lesson_18">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="Images/the_hare4.png" alt="Заяц и черепаха" class="lesson_18">
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        
         <section class="lesson_container">
             <div class="lesson_text">
                 <P>Учебник: Spotlight 4, Быкова Н.И., Дули Дж. и др.</P>
@@ -160,5 +185,7 @@
             </div>
         </div>
     </footer>
+    <script src="scripts/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>

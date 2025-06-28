@@ -246,8 +246,6 @@ a {
 }
 
 .lesson_18 {
-    width: "900";
-    height: "700";
     max-width: 100%;
     height: auto;
     display: block;
@@ -299,4 +297,12 @@ a {
 .intensive__img:hover {
     transform: scale(1.02);
     transition: transform 0.3s ease;
+}
+
+.swiper-container {
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2px;
+    box-sizing: border-box;
 }

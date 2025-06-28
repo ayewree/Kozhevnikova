@@ -20,3 +20,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
+
+// Задание 3.7
+
+document.addEventListener('DOMContentLoaded', function() {
+    var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+        type: "fraction",
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+});
