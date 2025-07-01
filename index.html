@@ -16,7 +16,7 @@
                 <img src="Images/logo.png" alt="logotype"></a>
                 <h1 class="header_title">English Teacher's Toolkit</h1>
             </div>
-              <ul class="menu">
+            <ul class="menu">
                 <li><a href="#">Для учителей</a>
                     <ul>
                     <li><a href="exercices.html">Поурочные планы</a></li>
@@ -47,7 +47,6 @@
             </div>
         </div>
     </header>
-
     <main>
         <section class="section__about">
             <div class="container">
@@ -60,28 +59,21 @@
                 </div>
             </div>
         </section>
-        
-        <!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Подпись при наведении</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    <section class="intensive">
-        <div class="intensive__item">
-            <img class="intensive__img" src="images/children.jpg" alt="Дети" >
-            <div class="intensive__description" hidden>Дети смотрят обучающие видео</div>
-        </div>
-    </section>
 
-    <script src="scripts/script.js"></script>
-</body>
-</html>
-        
-    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Подпись при наведении</title>
+        <link rel="stylesheet" href="css/style.css">
+
+        <section class="intensive">
+            <div class="intensive__item">
+                <img class="intensive__img" src="images/children.jpg" alt="Дети" >
+                <div class="intensive__description" hidden>Дети смотрят обучающие видео</div>
+            </div>
+        </section>
+
+        <script src="scripts/script.js"></script>
+
         <section class="section__features">
             <div class="container">
                 <h2 class="features__title section__title">Почему выбирают English Teacher's Toolkit?</h2>
@@ -114,8 +106,8 @@
                             <li class="feature__list-item">Статистика успеваемости для отслеживания результатов учеников</li>
                             <li class="feature__list-item">Форум для учителей - общайтесь с коллегами на интересующие вас темы</li>
                         </ul>
-                    </div>
-                </div>
+                    </div> 
+                </div> 
             </div>
         </section> 
 
@@ -135,13 +127,39 @@
             </div>
         </section> 
 
+        <section class="teachers">
+            <div class="teachers__container">
+                <h2 class="section-title">Наши преподаватели</h2>
+                <ul class="teachers__list">
+                    <li class="teachers__item">
+                        <img src="Images/teacher1.jpg" alt="Преподаватель" class="teachers__img">
+                        <h3 class="teachers__name">Преподаватель 1</h3>
+                        <p class="teachers__bio">Опыт работы: 5 лет</p>
+                        <button class="teachers__btn">Подробнее</button>
+                    </li>
+                    <li class="teachers__item">
+                        <img src="Images/teacher2.jpg" alt="Преподаватель" class="teachers__img">
+                        <h3 class="teachers__name">Преподаватель 2</h3>
+                        <p class="teachers__bio">Опыт работы: 3 года</p>
+                        <button class="teachers__btn">Подробнее</button>
+                    </li>
+                    <li class="teachers__item">
+                        <img src="Images/teacher3.jpg" alt="Преподаватель" class="teachers__img">
+                        <h3 class="teachers__name">Преподаватель 3</h3>
+                        <p class="teachers__bio">Опыт работы: 7 лет</p>
+                        <button class="teachers__btn">Подробнее</button>
+                    </li>
+                </ul>
+            </div>
+        </section>   
+        
         <section class="section__end">
             <div class="container">
                 <h1 class="end__text">Присоединяйтесь к English Teacher's Toolkit и сделайте изучение английского увлекательным!</h1>
             </div>
         </section>
     </main>
-
+     
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__content">
@@ -153,10 +171,10 @@
                     <h4 class="footer__title">Контакты</h4>
                     <ul class="footer__list">
                         <li class="footer__item">
-                            <a class="footer__link">+7 (800) 123-45-67</a>
+                            <p class="footer__link">+7 (800) 123-45-67</p>
                         </li>
                         <li class="footer__item">
-                            <a class="footer__link">info@englishtoolkit.com</a>
+                            <p class="footer__authors">ИЯ-41АФ: Кожевникова Анна, Милочкина Валерия, Шемякина Елизавета</p> 
                         </li>
                     </ul>
                 </div>
@@ -172,5 +190,20 @@
             </div>
         </div>
     </footer>
+    <div class="modal-application" hidden>
+        <section class="application">
+            <button class="application__close">&times;</button>
+            <div class="application__wrap">
+                <h3 class="application__title">Записаться на курс</h3>
+                <p class="application__text">Оставьте контакты, мы свяжемся с вами</p>
+                <form class="application__form" action="#">
+                    <input class="application__input" type="text" placeholder="Ваше имя" required>
+                    <input class="application__input" type="tel" placeholder="Телефон" required>
+                    <input class="application__input" type="email" placeholder="Email">
+                    <button class="application__button" type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
