@@ -4,19 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>English Teacher's Toolkit</title>
-    <link rel="stylesheet" href="styles/fonts.css">
-    <link rel="stylesheet" href="styles/footer.css">
-    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="scripts/script.js"></script>
     <style>
         body {
             margin: 0;
-            font-family: Arial, sans-serif;
         }
         
         main {
-            max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            max-width: 800px;
         }
         
         section {
@@ -77,7 +75,6 @@
     main {
         display: flex;
         flex-direction: column;
-        align-items: center; 
     }
     
     .page-title {
@@ -87,9 +84,19 @@
         letter-spacing: 2px;
         text-align: center; 
     }
+
+    .article-text {
+        max-width: 800px;
+    }
 </style>
         <div>
-            <section>
+            <section class="article_images">
+                <ul class="article_images_list">
+                    <!-- Здесь будет создаваться код с испльзованием json. -->
+                </ul>
+            </section>
+            <section class="article_text">
+                <p>Do you know these sights? Of course you do! They are known to everyone. But what about the little-known places you should visit in London? This is our article.</p>
                 <h2>Gloomy slot machines</h2>
                 <img src="Images/slot machines.jpg" alt="slot machines" width="600" height="300">
                 <p>Near Lincoln's Inn Fields, there is a shop Novelty Automation, which displays the inventions of
