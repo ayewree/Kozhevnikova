@@ -69,126 +69,54 @@ closeModalButton.addEventListener("click", () => {
 });
 
 
-//Задание 3.5 Навигационное меню
+//Задание 3.5 Карточки
 document.addEventListener('DOMContentLoaded', function() {
-  const categoriesMenu = document.querySelector('.categories__menu');
-  if (categoriesMenu) {
-    const categoriesList = categoriesMenu.querySelector('.categories-list');
+    const cardsPrice = document.querySelector('.price');
     
-    if (!categoriesList) {
-      console.error('Элемент .categories-list не найден');
-      return;
-    }
-
-    const menuData = [
-      {
-        link: 'blogs.html',
-        title: 'Все статьи',
-        active: true
-      },
-      {
-        link: '#',
-        title: 'Грамматика'
-      },
-      {
-        link: '#',
-        title: 'Лексика'
-      },
-      {
-        link: '#',
-        title: 'Произношение'
-      },
-      {
-        link: '#',
-        title: 'Культура и развлечения'
-      },
-      {
-        link: '#',
-        title: 'Советы по изучению'
-      }
-    ];
-    
- menuData.forEach(item => {
-      categoriesList.insertAdjacentHTML('beforeend', createLink(item));
-    });
-  } else {
-    console.error('Элемент .categories__menu не найден');
-  }
-    const createLink = (item) => {
-      const activeClass = item.active ? 'active' : '';
-      return `
-        <li class="category__item"><a href="${item.link}" class="category__link ${activeClass}">${item.title}</a>
-        </li>
-      `;
-    };
-
-   
-
-  for (const linkItem in menuData) {
-      const link = menuData[linkItem];
-      const linkIndex = createLink(link.UrlLink, link.title);
-      categoriesList.insertAdjacentHTML('beforeend', linkIndex);
-
-  }
-});
-
-
-// Задание 3.6 Динамическая галерея изображений
-document.addEventListener('DOMContentLoaded', function() {
-  const cardsImages = document.querySelector(".article_images");
-
-if (cardsImages) {
-    const cardListImages = cardsImages.querySelector(".article_images_list");
-    const apiUrl = "images.json";
-
-    const createCard = (imageUrl, imageAlt, imageWidth) => {
-        const image = `
-            <li class="article_images_item">
-                <img class="images__picture" src="${imageUrl[0]}" alt="${imageAlt}" width="${imageWidth}">
-                <img class="images__picture" src="${imageUrl[1]}" alt="${imageAlt}" width="${imageWidth}" style="display: none;">
-            </li>
-        `;
-        return image;
-    };
-
-    fetch(apiUrl)
-        .then((response) => response.json())
-        .then((images) => {
-            console.log(images);
-            console.log(typeof images);
-
-            images.forEach((item) => {
-                const cardElement = createCard(
-                    item.imageUrl,
-                    item.imageAlt,
-                    item.imageWidth
-                );
-                cardListImages.insertAdjacentHTML("beforeend", cardElement);
-            });
-
-            const pictures = document.querySelectorAll(".images__picture");
-            if (pictures) {
-                pictures.forEach((picture) => {
-                    picture.addEventListener("click", () => {
-                        const parentItem = picture.parentElement;
-                        const parentPictures = parentItem.querySelectorAll(".images__picture");
-
-                        parentPictures.forEach((parentPicture) => {
-                            if (parentPicture !== picture) {
-                                parentPicture.style.display = "block";
-                            } else {
-                                parentPicture.style.display = "none";
-                            }
-                        });
-                    });
-                });
+    if (cardsPrice) {
+        const priceList = cardsPrice.querySelector('.price__list');
+        
+        const cardsPriceData = {
+            free: {
+                level: 'БЕСПЛАТНЫЙ',
+                price: '0 ₽',
+                description: 'Базовый доступ к материалам<br>Ограниченное количество уроков<br>12 стандартных шаблонов упражнений',
+                button: 'Начать бесплатно'
+            },
+            standard: {
+                level: 'СТАНДАРТ',
+                price: '400 ₽/мес',
+                description: 'Полный доступ к материалам<br>Неограниченное количество уроков<br>12 стандартных шаблонов упражнений',
+                button: 'Выбрать тариф'
+            },
+            pro: {
+                level: 'ПРО',
+                price: '800 ₽/мес',
+                description: 'Все возможности STANDARD<br>Доступ к эксклюзивным материалам<br>+8 шаблонов упражнений<br>Создание контента с помощю ИИ',
+                button: 'Выбрать тариф'
             }
-        })
-        .catch((error) => {
-            console.error("Ошибка при загрузке данных:", error);
-        });
-}
-})
+        };
+
+        const createCard = (level, price, description, button) => {
+            return `
+                <li class="price__item">
+                    <p class="price__level">${level}</p>
+                    <p class="price__price">${price}</p>
+                    <p class="price__description">${description.replace(/<br>/g, '<br>')}</p>
+                    <button class="price__button button">${button}</button>
+                </li>
+            `;
+        };
+
+        priceList.innerHTML = '';
+
+        for (const cardKey in cardsPriceData) {
+            const card = cardsPriceData[cardKey];
+            const cardElement = createCard(card.level, card.price, card.description, card.button);
+            priceList.insertAdjacentHTML('beforeend', cardElement);
+        }
+    }
+});
 
 //Предзагрузчик
 const preloader = document.querySelector(".preloader");
